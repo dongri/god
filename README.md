@@ -1,3 +1,8 @@
+# go-beer
+:beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: 
+
+:beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers:
+
 # go-timeformatter
 
 ```
@@ -15,4 +20,3 @@ func main() {
 	fmt.Println(time) // 2015年03月04日 22時56分23秒
 }
 ```
-
