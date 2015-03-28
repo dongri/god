@@ -1,3 +1,3 @@
 # go-beer
-Go! :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: 
-
+:beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: 
+:beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers:
