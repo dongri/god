@@ -1,6 +1,6 @@
 # GoUtils
 
-```
+```go
 package main
 
 import (
