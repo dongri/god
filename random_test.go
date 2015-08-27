@@ -1,4 +1,4 @@
-package GoBeer
+package goutils
 
 import (
 	"fmt"

@@ -1,12 +1,12 @@
-package GoBeer
+package goutils
 
 import (
 	"strings"
 	"time"
 )
 
-// Format ...
-func Format(t time.Time, layout string) string {
+// DateFormat ...
+func DateFormat(t time.Time, layout string) string {
 	pattern := map[string]string{
 		"%a": "Mon",
 		"%A": "Monday",

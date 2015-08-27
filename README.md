@@ -1,19 +1,30 @@
 # GoUtils
 
-# TimeFormatter
-
 ```
 package main
 
-import (
-	"fmt"
-	"time"
-
-	"github.com/dongri/go-timeformatter"
-)
+import "fmt"
+import "time"
+import "github.com/dongri/goutils"
 
 func main() {
-	time := TimeFormatter.Format(time.Now(), "%Y年%m月%d日 %H時%M分%S秒")
-	fmt.Println(time) // 2015年03月04日 22時56分23秒
+
+	// Detect Credit Card Type
+  cardType := goutils.DetectCardType("4111111111111")
+	fmt.Println(cardType)
+
+	// Generator Random
+  random := new(goutils.Random)
+	random.UseNumber()
+	random.UseSmallLetter()
+	random.UseCapitalLetter()
+	r := random.Random(20)
+	fmt.Println(r)
+
+  // Date Format
+  time, _ := time.Parse("2006-01-02 15:04:05", "2015-03-04 23:29:23")
+	formatedDate := goutils.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
+  fmt.Println(formatedDate)	
 }
+
 ```
