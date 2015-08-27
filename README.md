@@ -1,9 +1,6 @@
-# go-beer
-:beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: :beer: 
+# GoUtils
 
-:beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers: :beers:
-
-# go-timeformatter
+# TimeFormatter
 
 ```
 package main
