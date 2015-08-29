@@ -14,6 +14,7 @@ const (
 	hiragana      = "ぁあぃいぅうぇえぉおかがきぎくぐけげこごさざしじすずせぜそぞただちぢっつづてでとどなにぬねのはばぱひびぴふぶぷへべぺほぼぽまみむめもゃやゅゆょよらりるれろゎわゐゑをん"
 	katakana      = "ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワヰヱヲンヴヵヶ"
 	hangul        = "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㄲㄸㅃㅆㅉㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣㅐㅒㅔㅖㅘㅙㅚㅝㅞㅟㅢ"
+	shuzi         = "一二三四五六七八九十零"
 )
 
 // Random ...
@@ -25,6 +26,7 @@ type Random struct {
 	Hiragana      string
 	Katakana      string
 	Hangul        string
+	Shuzi         string
 }
 
 // UseNumber ...
@@ -60,6 +62,11 @@ func (t *Random) UseKatakana() {
 // UseHangul ...
 func (t *Random) UseHangul() {
 	t.Hangul = hangul
+}
+
+// UseShuzi ...
+func (t *Random) UseShuzi() {
+	t.Shuzi = shuzi
 }
 
 // Random ...
