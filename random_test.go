@@ -1,9 +1,6 @@
 package goutils
 
-import (
-	"fmt"
-	"testing"
-)
+import "testing"
 
 func TestRandomStringDigits(t *testing.T) {
 	random := new(Random)
@@ -11,7 +8,6 @@ func TestRandomStringDigits(t *testing.T) {
 	random.UseSmallLetter()
 	random.UseCapitalLetter()
 	r := random.Random(20)
-	fmt.Println(r)
 	if len(r) != 20 {
 		t.Fatal("Wrong length returned")
 	}
