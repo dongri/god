@@ -2,7 +2,7 @@
 
 ### Installation
 ```
-$ go get github.com/dongri/goutils
+$ go get github.com/dongri/go-utils
 ```
 
 ### Detect Credit Card Type
@@ -11,7 +11,7 @@ $ go get github.com/dongri/goutils
 package main
 import (
 	"fmt"
-	"github.com/dongri/goutils"
+	goutils "github.com/dongri/go-utils"
 )
 func main() {
 	cardType1 := goutils.DetectCardType("4111111111111")
@@ -28,7 +28,7 @@ package main
 import (
 	"fmt"
 	"time"
-	"github.com/dongri/goutils"
+	goutils "github.com/dongri/goutils"
 )
 func main() {
 	time, _ := time.Parse("2006-01-02 15:04:05", "2015-03-04 23:29:23")
@@ -43,7 +43,7 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/goutils"
+	goutils "github.com/dongri/goutils"
 )
 func main() {
 	random := new(goutils.Random)
