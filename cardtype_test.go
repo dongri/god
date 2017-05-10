@@ -1,4 +1,4 @@
-package utils
+package barikata
 
 import (
 	"testing"
@@ -6,8 +6,8 @@ import (
 
 func TestDetectCardType(t *testing.T) {
 
-	cardType := ""
-	expected := ""
+	var cardType string
+	var expected string
 
 	// VISA ...
 	cardType = DetectCardType("4111111111111")

@@ -1,4 +1,4 @@
-package utils
+package barikata
 
 import (
 	"crypto/aes"
@@ -9,6 +9,7 @@ import (
 	"io"
 )
 
+// EncryptString ...
 func EncryptString(cryptKey string, text string) (string, error) {
 	encryptText, err := Encrypt(cryptKey, []byte(text))
 	if err != nil {
@@ -17,6 +18,7 @@ func EncryptString(cryptKey string, text string) (string, error) {
 	return fmt.Sprintf("%x", encryptText), nil
 }
 
+// DecryptString ...
 func DecryptString(cryptKey string, text string) (string, error) {
 	b, err := hex.DecodeString(text)
 	if err != nil {
@@ -31,7 +33,7 @@ func DecryptString(cryptKey string, text string) (string, error) {
 
 // Block Encrypt / Decrypt
 
-// Encrypt
+// Encrypt ...
 func Encrypt(cryptKey string, plainText []byte) ([]byte, error) {
 	key := []byte(cryptKey)
 	block, err := aes.NewCipher(key)
@@ -49,7 +51,7 @@ func Encrypt(cryptKey string, plainText []byte) ([]byte, error) {
 	return cipherText, nil
 }
 
-// Decrypt
+// Decrypt ...
 func Decrypt(cryptKey string, cipherText []byte) ([]byte, error) {
 	key := []byte(cryptKey)
 	block, err := aes.NewCipher(key)

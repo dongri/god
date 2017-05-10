@@ -2,7 +2,7 @@
 
 ### Installation
 ```
-$ go get github.com/dongri/go-utils
+$ go get github.com/dongri/barikata
 ```
 
 ### Detect Credit Card Type
@@ -11,12 +11,12 @@ $ go get github.com/dongri/go-utils
 package main
 import (
 	"fmt"
-	goutils "github.com/dongri/go-utils"
+	"github.com/dongri/barikata"
 )
 func main() {
-	cardType1 := goutils.DetectCardType("4111111111111")
+	cardType1 := barikata.DetectCardType("4111111111111")
 	fmt.Println(cardType1) // Visa
-	cardType2 := goutils.DetectCardType("5555555555554444")
+	cardType2 := barikata.DetectCardType("5555555555554444")
 	fmt.Println(cardType2) // Master
 }
 ```
@@ -28,11 +28,11 @@ package main
 import (
 	"fmt"
 	"time"
-	goutils "github.com/dongri/goutils"
+	"github.com/dongri/barikata"
 )
 func main() {
 	time, _ := time.Parse("2006-01-02 15:04:05", "2015-03-04 23:29:23")
-	formatedDate := goutils.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
+	formatedDate := barikata.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
 	fmt.Println(formatedDate) // 2015年03月04日 23時29分23秒
 }
 ```
@@ -43,10 +43,10 @@ func main() {
 package main
 import (
 	"fmt"
-	goutils "github.com/dongri/goutils"
+	"github.com/dongri/barikata"
 )
 func main() {
-	random := new(goutils.Random)
+	random := new(barikata.Random)
 	random.UseNumber()
 	random.UseSmallLetter()
 	random.UseCapitalLetter()
