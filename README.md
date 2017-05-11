@@ -90,7 +90,7 @@ func main() {
 	major, minor := barikata.PackBeacon(1,2,8)
 	fmt.Println(major, minor)
 
-	major, minor := barikata.UnpackBeacon(1,2,8)
+	major, minor := barikata.UnpackBeacon(0, 258,8)
 	fmt.Println(major, minor)
 }
 ```
