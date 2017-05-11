@@ -14,10 +14,10 @@ const (
 	BitTotal = 32
 )
 
-// PackIBeaconParams is pack major, minor values
+// PackIBeacon is pack major, minor values
 // params x, y is sequence value (24bit, 8bit)
 // returns major, minor is real beacon value (16bit, 16bit)
-func PackIBeaconParams(x, y int, minorBit uint) (int, int) {
+func PackBeacon(x, y int, minorBit uint) (int, int) {
 	s := fmt.Sprintf("%024b%08b", x, y)
 	sum, _ := strconv.ParseInt(s, 2, 0)
 	major := int(sum >> (minorBit + uint(BitTotal/2-minorBit)))
@@ -25,10 +25,10 @@ func PackIBeaconParams(x, y int, minorBit uint) (int, int) {
 	return major, minor
 }
 
-// UnpackIBeaconParams is unpack major, minor values
+// UnpackIBeacon is unpack major, minor values
 // params x, y is real beacon value (16bit, 16bit)
 // returns major, minor is sequence value (24bit, 8bit)
-func UnpackIBeaconParams(x, y int, minorBit uint) (int, int) {
+func UnpackBeacon(x, y int, minorBit uint) (int, int) {
 	s := fmt.Sprintf("%016b%016b", x, y)
 	sum, _ := strconv.ParseInt(s, 2, 0)
 	major := int(sum) >> minorBit

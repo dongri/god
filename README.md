@@ -1,12 +1,12 @@
-# GoUtils
+# :ramen: barikata
 
 ### Installation
+
 ```
 $ go get github.com/dongri/barikata
 ```
 
 ### Detect Credit Card Type
-
 ```go
 package main
 import (
@@ -22,7 +22,6 @@ func main() {
 ```
 
 ### Date Format
-
 ```go
 package main
 import (
@@ -38,7 +37,6 @@ func main() {
 ```
 
 ### Random
-
 ```go
 package main
 import (
@@ -52,6 +50,48 @@ func main() {
 	random.UseCapitalLetter()
 	r := random.Random(20)
 	fmt.Println(r) // 6Zyk2vOQYNIKmbIa6BcH
+}
+```
+
+### Sha1
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/barikata"
+)
+func main() {
+	s := barikata.Sha512Sum512("hello"))
+	fmt.Println(s)
+}
+```
+
+### Cipher
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/barikata"
+)
+func main() {
+	encryptedText, err := barikata.EncryptString("passwordpasswordpasswordpassword", "hoge")
+	fmt.Println(err, encryptedText)
+}
+```
+
+### Beacon
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/barikata"
+)
+func main() {
+	major, minor := barikata.PackBeacon(1,2,8)
+	fmt.Println(major, minor)
+
+	major, minor := barikata.UnpackBeacon(1,2,8)
+	fmt.Println(major, minor)
 }
 ```
 
