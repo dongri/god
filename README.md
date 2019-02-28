@@ -1,9 +1,9 @@
-# :ramen: barikata
+# :ramen: gou
 
 ### Installation
 
 ```
-$ go get github.com/dongri/barikata
+$ go get github.com/dongri/gou
 ```
 
 ### Detect Credit Card Type
@@ -11,12 +11,12 @@ $ go get github.com/dongri/barikata
 package main
 import (
 	"fmt"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
-	cardType1 := barikata.DetectCardType("4111111111111")
+	cardType1 := gou.DetectCardType("4111111111111")
 	fmt.Println(cardType1) // Visa
-	cardType2 := barikata.DetectCardType("5555555555554444")
+	cardType2 := gou.DetectCardType("5555555555554444")
 	fmt.Println(cardType2) // Master
 }
 ```
@@ -27,11 +27,11 @@ package main
 import (
 	"fmt"
 	"time"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
 	time, _ := time.Parse("2006-01-02 15:04:05", "2015-03-04 23:29:23")
-	formatedDate := barikata.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
+	formatedDate := gou.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
 	fmt.Println(formatedDate) // 2015年03月04日 23時29分23秒
 }
 ```
@@ -41,10 +41,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
-	random := new(barikata.Random)
+	random := new(gou.Random)
 	random.UseNumber()
 	random.UseSmallLetter()
 	random.UseCapitalLetter()
@@ -58,10 +58,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
-	s := barikata.Sha512Sum512("hello"))
+	s := gou.Sha512Sum512("hello"))
 	fmt.Println(s)
 }
 ```
@@ -71,10 +71,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
-	encryptedText, err := barikata.EncryptString("passwordpasswordpasswordpassword", "hoge")
+	encryptedText, err := gou.EncryptString("passwordpasswordpasswordpassword", "hoge")
 	fmt.Println(err, encryptedText)
 }
 ```
@@ -84,13 +84,13 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/barikata"
+	"github.com/dongri/gou"
 )
 func main() {
-	major, minor := barikata.PackBeacon(1,2,8)
+	major, minor := gou.PackBeacon(1,2,8)
 	fmt.Println(major, minor)
 
-	major, minor := barikata.UnpackBeacon(0, 258,8)
+	major, minor := gou.UnpackBeacon(0, 258,8)
 	fmt.Println(major, minor)
 }
 ```

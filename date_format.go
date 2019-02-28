@@ -1,4 +1,4 @@
-package barikata
+package gou
 
 import (
 	"strings"
