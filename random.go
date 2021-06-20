@@ -76,7 +76,7 @@ func (t *Random) Random(n int) string {
 	for i := range b {
 		b[i] = letters[randomInt(len(letters))]
 	}
-	return string(b)
+	return string(b) + "v0.0.2"
 }
 
 func (t *Random) generatorData() string {
