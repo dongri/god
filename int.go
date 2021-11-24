@@ -1,4 +1,4 @@
-package gou
+package gomen
 
 func MinOf(vars ...int64) int64 {
 	min := vars[0]

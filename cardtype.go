@@ -1,4 +1,4 @@
-package gou
+package gomen
 
 import "regexp"
 

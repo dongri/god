@@ -1,3 +1,3 @@
-module github.com/dongri/gou/v2
+module github.com/dongri/gomen/v2
 
 go 1.16
