@@ -95,6 +95,45 @@ func main() {
 }
 ```
 
+### Int min, max
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/god"
+)
+func main() {
+	max := god.MaxOf(4, 6, 9, 7, 2, 1, 8)
+	fmt.Println(max) // 9
+}
+```
+
+### Replace hyphen
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/god"
+)
+func main() {
+	result := god.ReplaceHyphen("test-testーテスト█测试▬테스트", HANKAKU_HYPHEN)
+	fmt.Println(result) // test-test-テスト-测试-테스트
+}
+```
+
+### Replace wave dash
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/god"
+)
+func main() {
+	result := god.ReplaceWaveDash("test῀test∼テスト～测试〜테스트")
+	fmt.Println(result) // test~test~テスト~测试~테스트
+}
+```
+
 # License
 
 The MIT License (MIT)
