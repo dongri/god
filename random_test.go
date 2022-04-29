@@ -1,4 +1,4 @@
-package gomen
+package god
 
 import "testing"
 
@@ -9,6 +9,6 @@ func TestRandomStringDigits(t *testing.T) {
 	random.UseCapitalLetter()
 	r := random.Random(20)
 	if len(r) != 20 {
-		t.Fatal("Wrong length returned")
+		t.Fatal("Wrong length returned", len(r))
 	}
 }

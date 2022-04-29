@@ -1,4 +1,4 @@
-package gomen
+package god
 
 import (
 	"math/rand"
@@ -76,7 +76,7 @@ func (t *Random) Random(n int) string {
 	for i := range b {
 		b[i] = letters[randomInt(len(letters))]
 	}
-	return string(b) + "v0.0.1"
+	return string(b)
 }
 
 func (t *Random) generatorData() string {

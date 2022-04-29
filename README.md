@@ -1,9 +1,9 @@
-# Go :ramen:
+# God 神
 
 ### Installation
 
 ```
-$ go get github.com/dongri/gomen
+$ go get github.com/dongri/god
 ```
 
 ### Detect Credit Card Type
@@ -11,12 +11,12 @@ $ go get github.com/dongri/gomen
 package main
 import (
 	"fmt"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
-	cardType1 := gomen.DetectCardType("4111111111111")
+	cardType1 := god.DetectCardType("4111111111111")
 	fmt.Println(cardType1) // Visa
-	cardType2 := gomen.DetectCardType("5555555555554444")
+	cardType2 := god.DetectCardType("5555555555554444")
 	fmt.Println(cardType2) // Master
 }
 ```
@@ -27,11 +27,11 @@ package main
 import (
 	"fmt"
 	"time"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
 	time, _ := time.Parse("2006-01-02 15:04:05", "2015-03-04 23:29:23")
-	formatedDate := gomen.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
+	formatedDate := god.DateFormat(time, "%Y年%m月%d日 %H時%M分%S秒")
 	fmt.Println(formatedDate) // 2015年03月04日 23時29分23秒
 }
 ```
@@ -41,10 +41,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
-	random := new(gomen.Random)
+	random := new(god.Random)
 	random.UseNumber()
 	random.UseSmallLetter()
 	random.UseCapitalLetter()
@@ -58,10 +58,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
-	s := gomen.Sha512Sum512("hello"))
+	s := god.Sha512Sum512("hello"))
 	fmt.Println(s)
 }
 ```
@@ -71,10 +71,10 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
-	encryptedText, err := gomen.EncryptString("passwordpasswordpasswordpassword", "hoge")
+	encryptedText, err := god.EncryptString("passwordpasswordpasswordpassword", "hoge")
 	fmt.Println(err, encryptedText)
 }
 ```
@@ -84,13 +84,13 @@ func main() {
 package main
 import (
 	"fmt"
-	"github.com/dongri/gomen"
+	"github.com/dongri/god"
 )
 func main() {
-	major, minor := gomen.PackBeacon(1,2,8)
+	major, minor := god.PackBeacon(1,2,8)
 	fmt.Println(major, minor)
 
-	major, minor := gomen.UnpackBeacon(0, 258,8)
+	major, minor := god.UnpackBeacon(0, 258,8)
 	fmt.Println(major, minor)
 }
 ```

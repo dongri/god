@@ -1,4 +1,4 @@
-package gomen
+package god
 
 import (
 	"testing"

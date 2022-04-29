@@ -1,3 +1,3 @@
-module github.com/dongri/gomen/v2
+module github.com/dongri/god
 
-go 1.16
+go 1.18
