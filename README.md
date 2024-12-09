@@ -134,6 +134,21 @@ func main() {
 }
 ```
 
+### Caesar Cipher
+```go
+package main
+import (
+	"fmt"
+	"github.com/dongri/god"
+)
+
+func main() {
+	caesarCipher := god.NewCaesarCipher(3)
+	encrypted := caesarCipher.Encrypt("hello")
+	fmt.Println(encrypted) // khoor
+}
+```
+
 # License
 
 The MIT License (MIT)
